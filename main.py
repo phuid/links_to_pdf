@@ -38,9 +38,9 @@ width = 50
 height = 50
 
 h_margin = 10
-v_margin = 15
+v_margin = 17
 
-v_offset = 20
+v_offset = 15
 h_offset = 20
 
 for x in range(0, len(links)):
@@ -52,18 +52,26 @@ for x in range(0, len(links)):
         w=width,
         h=height,
     )
-    split = len(token) // 2
+    
+    pdf.set_font("Arial", size=10)
     pdf.text(
         x=(width + h_margin) * ((x - xminus) % cols) + h_offset,
         y=(height + v_margin) * ((x - xminus) // cols) + 55 + v_offset,
-        txt=token[:split],
+        # txt=links[x][:links[x].rfind("?")],
+        txt="majales.gyrec.cz/hlasovani.html"
     )
     pdf.text(
         x=(width + h_margin) * ((x - xminus) % cols) + h_offset,
         y=(height + v_margin) * ((x - xminus) // cols) + 60 + v_offset,
-        txt=token[split:],
+        txt="Unikátní kód: ",
     )
-    if x % (rows * cols) == rows * cols - 1:
+    pdf.set_font("Courier", size=12)
+    pdf.text(
+        x=(width + h_margin) * ((x - xminus) % cols) + 25 + h_offset,
+        y=(height + v_margin) * ((x - xminus) // cols) + 60 + v_offset,
+        txt=token,
+    )
+    if x % (rows * cols) == rows * cols - 1 and x != len(links) - 1:
         pdf.add_page()
         xminus += rows * cols
 
