@@ -9,6 +9,8 @@
 6) run `python main.py`
 7) yaay🎉🎉 you've got your `output.pdf`
 
+if you have any problems message me @hroudiic (discord, ig)
+
 ### output example
 ![output example](./readme_images/Screenshot%202024-10-26%20104333.jpg)
 
