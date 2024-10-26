@@ -7,6 +7,9 @@
 5) run `python main.py`
 6) yaay🎉🎉 you've got your `output.pdf`
 
+### output example
+![output example](./readme_images/Screenshot%202024-10-26%20104333.jpg)
+
 
 #### getting your links
 
