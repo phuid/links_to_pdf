@@ -37,11 +37,11 @@ cols = 3
 width = 50
 height = 50
 
-h_margin = 10
-v_margin = 17
+v_margin = 22
+h_margin = 16
 
-v_offset = 15
-h_offset = 20
+v_offset = 10
+h_offset = 14
 
 for x in range(0, len(links)):
     token = links[x][links[x].rfind("token=") + 6 :]
@@ -65,7 +65,7 @@ for x in range(0, len(links)):
         y=(height + v_margin) * ((x - xminus) // cols) + 60 + v_offset,
         txt="Unikátní kód: ",
     )
-    pdf.set_font("Courier", size=12)
+    pdf.set_font("Courier", size=12, style="B")
     pdf.text(
         x=(width + h_margin) * ((x - xminus) % cols) + 25 + h_offset,
         y=(height + v_margin) * ((x - xminus) // cols) + 60 + v_offset,
